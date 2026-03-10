@@ -4,6 +4,21 @@ Este projeto utiliza **Ciência de Dados** e **Estatística Aplicada** para inve
 
 ---
 
+## O que foi antes da análise: 
+
+A partir do banco de dados "Deputados" da Câmara dos Deputados, analisou-se quais variáveis seriam utilizadas e quais dados não estariam padronizados. A partir disso, iniciei a limpeza do banco de dados e a pós-estratificação dos dados utilizados. 
+
+  ## Metodologia 
+
+O projeto foi desenvolvido em **Python**, seguindo os critérios estatísticos:
+
+* **Processamento de Dados:** `Pandas` e `NumPy` para manipulação de dados em formato *long*.
+* **Estatística Avançada:** `Statsmodels` para regressão logística e cálculos de *Intervalo de Confiança de Wilson* (robusto para amostras menores).
+* **Machine Learning:** `Scikit-learn` para modelagem de tendências lineares.
+* **Visualização:** `Matplotlib` e `Seaborn` com paletas de cores focadas em acessibilidade e contraste.
+
+> **Nota Metodológica:** A "reeleição" é tratada como uma *proxy* baseada na presença consecutiva entre legislaturas (L-1 e L), capturando a continuidade do mandato parlamentar.
+
 ## 1. Contexto Histórico
 A participação feminina na política brasileira é marcada por uma sub-representação histórica. Mecanismos legais, como a **Lei de Cotas (1997)** e a **Reserva de Fundo Partidário (2015)**, atuaram como motores fundamentais de mudança.
 
@@ -30,19 +45,6 @@ Utilizei um modelo de **Regressão Linear** para projetar a tendência das próx
 ![Projeção de Tendência](./data/processed/grafico_projecao.png)
 
 * **Previsão:** Estimamos atingir **24.4% em 2031**. Embora o crescimento seja constante ($R^2=0.88$), ainda estamos longe da paridade de 50%. No ritmo atual, a igualdade plena levaria décadas. Este dado é um convite à ação: como podemos acelerar essa curva?
-
----
-
-## Metodologia 
-
-O projeto foi desenvolvido em **Python**, seguindo rigorosos critérios estatísticos:
-
-* **Processamento de Dados:** `Pandas` e `NumPy` para manipulação de dados em formato *long*.
-* **Estatística Avançada:** `Statsmodels` para regressão logística e cálculos de *Intervalo de Confiança de Wilson* (robusto para amostras menores).
-* **Machine Learning:** `Scikit-learn` para modelagem de tendências lineares.
-* **Visualização:** `Matplotlib` e `Seaborn` com paletas de cores focadas em acessibilidade e contraste.
-
-> **Nota Metodológica:** A "reeleição" é tratada como uma *proxy* baseada na presença consecutiva entre legislaturas (L-1 e L), capturando a continuidade do mandato parlamentar.
 
 ---
 
