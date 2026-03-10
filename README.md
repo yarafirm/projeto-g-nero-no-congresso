@@ -7,7 +7,7 @@ Este projeto utiliza **Ciência de Dados** e **Estatística Aplicada** para inve
 ## 1. Contexto Histórico
 A participação feminina na política brasileira é marcada por uma sub-representação histórica. Mecanismos legais, como a **Lei de Cotas (1997)** e a **Reserva de Fundo Partidário (2015)**, atuaram como motores fundamentais de mudança.
 
-![Evolução da Representatividade](./data/processed/grafico_representatividade_pctF.png)
+![Evolução da Representatividade](./data/processed/gráfico_representativade.png)
 
 * **O que o dado diz:** Saímos de **6.0%** na legislatura 48 para **23.0%** na atual. Cada ponto no gráfico representa uma quebra de barreira. Os maiores saltos coincidem com mudanças na legislação, provando que políticas afirmativas são essenciais para acelerar a história.
 
