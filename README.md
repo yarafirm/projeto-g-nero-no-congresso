@@ -20,7 +20,7 @@ O estudo investiga se as mulheres, uma vez eleitas, mantêm seus cargos na mesma
 
 * **Interpretação:** As linhas de homens (azul) e mulheres (rosa) cruzam-se frequentemente. Quando as faixas sombreadas (Intervalos de Confiança) se sobrepõem, não há diferença estatística significativa. Portanto, indica que **o desafio real não é a permanência, mas sim a barreira de acesso inicial ao cargo**.
 
-Além disso, OR próximo de 1.0 indica que ser homem ou mulher não altera drasticamente a chance de continuidade e o fator "Legislatura" apresenta p-valor significativo, mostrando que a renovação política segue um processo temporal natural, independentemente do gênero de quem ocupa a cadeira.
+Além disso, OR próximo de 1.0 indica que ser homem ou mulher não altera drasticamente a chance de continuidade e o fator "Legislatura" apresenta p-valor significativo, mostrando que a renovação política segue um processo temporal natural.
 
 ---
 
