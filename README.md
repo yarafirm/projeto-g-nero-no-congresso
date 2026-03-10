@@ -8,7 +8,7 @@ Este projeto utiliza **Ciência de Dados** e **Estatística Aplicada** para inve
 
 A partir do banco de dados "Deputados" da Câmara dos Deputados, analisou-se quais variáveis seriam utilizadas e quais dados não estariam padronizados. A partir disso, iniciei a limpeza do banco de dados e a pós-estratificação dos dados utilizados. 
 
-  ## Metodologia 
+*Metodologia*
 
 O projeto foi desenvolvido em **Python**, seguindo os critérios estatísticos:
 
