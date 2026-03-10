@@ -16,18 +16,18 @@ A participação feminina na política brasileira é marcada por uma sub-represe
 ## 2. Questões relativas à permanência de cargo
 O estudo investiga se as mulheres, uma vez eleitas, mantêm seus cargos na mesma proporção que os homens, utilizando uma *proxy* de reeleição (presença em legislaturas consecutivas).
 
-![Taxa de Reeleição por Gênero](./data/processed/grafico_reeleicao_proxy_taxa.png)
+![Taxa de Reeleição por Gênero](./data/processed/grafico_reeleicao_proxy_taxa%20(1).png)
 
 * **Interpretação:** As linhas de homens (azul) e mulheres (rosa) cruzam-se frequentemente. Quando as faixas sombreadas (Intervalos de Confiança) se sobrepõem, não há diferença estatística significativa. Portanto, indica que **o desafio real não é a permanência, mas sim a barreira de acesso inicial ao cargo**.
 
-Além disso, OR próximo de 1.0 indica que ser homem ou mulher não altera drasticamente a chance de continuidade e o fator "Legislatura" apresenta p-valor significativo, mostrando que a renovação política segue um processo temporal natural, independente do gênero de quem ocupa a cadeira.
+Além disso, OR próximo de 1.0 indica que ser homem ou mulher não altera drasticamente a chance de continuidade e o fator "Legislatura" apresenta p-valor significativo, mostrando que a renovação política segue um processo temporal natural, independentemente do gênero de quem ocupa a cadeira.
 
 ---
 
 ## 4. Projeção Linear e Paridade de Gênero
 Utilizei um modelo de **Regressão Linear** para projetar a tendência das próximas três legislaturas.
 
-![Projeção de Tendência](./data/processed/grafico_projecao_pctF.png)
+![Projeção de Tendência](./data/processed/grafico_projecao.png)
 
 * **Previsão:** Estimamos atingir **24.4% em 2031**. Embora o crescimento seja constante ($R^2=0.88$), ainda estamos longe da paridade de 50%. No ritmo atual, a igualdade plena levaria décadas. Este dado é um convite à ação: como podemos acelerar essa curva?
 
