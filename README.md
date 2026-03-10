@@ -39,7 +39,7 @@ Além disso, OR próximo de 1.0 indica que ser homem ou mulher não altera drast
 
 ---
 
-## 4. Projeção Linear e Paridade de Gênero
+## 3. Projeção Linear e Paridade de Gênero
 Utilizei um modelo de **Regressão Linear** para projetar a tendência das próximas três legislaturas.
 
 ![Projeção de Tendência](./data/processed/grafico_projecao.png)
