@@ -1,56 +1,67 @@
-# Análise de Gênero na Câmara dos Deputados (1987–2027)
+# Gender in the Brazilian Chamber of Deputies (1987–2027)
 
-Este projeto utiliza **Ciência de Dados** e **Estatística Aplicada** para investigar a evolução da representatividade feminina no legislativo federal brasileiro. O objetivo é analisar se o gênero é um fator determinante para a permanência no poder e qual o ritmo esperado de crescimento para as próximas décadas.
+*English version. A versão em português está em [README.pt-BR.md](README.pt-BR.md).*
 
----
-
-## O que foi antes da análise: 
-
-A partir do banco de dados "Deputados" da Câmara dos Deputados, analisou-se quais variáveis seriam utilizadas e quais dados não estariam padronizados. A partir disso, iniciei a limpeza do banco de dados e a pós-estratificação dos dados utilizados. 
-
-*Metodologia*
-
-O projeto foi desenvolvido em **Python**, seguindo os critérios estatísticos:
-
-* **Processamento de Dados:** `Pandas` e `NumPy` para manipulação de dados em formato *long*.
-* **Estatística Avançada:** `Statsmodels` para regressão logística e cálculos de *Intervalo de Confiança de Wilson* (robusto para amostras menores).
-* **Machine Learning:** `Scikit-learn` para modelagem de tendências lineares.
-* **Visualização:** `Matplotlib` e `Seaborn` com paletas de cores focadas em acessibilidade e contraste.
-
-> **Nota Metodológica:** A "reeleição" é tratada como uma *proxy* baseada na presença consecutiva entre legislaturas (L-1 e L), capturando a continuidade do mandato parlamentar.
-
-## 1. Contexto Histórico
-A participação feminina na política brasileira é marcada por uma sub-representação histórica. Mecanismos legais, como a **Lei de Cotas (1997)** e a **Reserva de Fundo Partidário (2015)**, atuaram como motores fundamentais de mudança.
-
-![Evolução da Representatividade](./data/processed/gráfico_representativade.png)
-
-* **O que o dado diz:** Saímos de **6.0%** na legislatura 48 para **23.0%** na atual. Cada ponto no gráfico representa uma quebra de barreira. Os maiores saltos coincidem com mudanças na legislação, provando que políticas afirmativas são essenciais para acelerar a história.
+This project applies **data science** and **applied statistics** to the evolution of women's representation in Brazil's federal lower house. It asks whether gender is a determining factor for staying in office and what growth pace can be expected over the coming decades.
 
 ---
 
-## 2. Questões relativas à permanência de cargo
-O estudo investiga se as mulheres, uma vez eleitas, mantêm seus cargos na mesma proporção que os homens, utilizando uma *proxy* de reeleição (presença em legislaturas consecutivas).
+## Before the analysis
 
-![Taxa de Reeleição por Gênero](./data/processed/grafico_reeleicao_proxy_taxa%20(1).png)
+Starting from the Chamber of Deputies' open "Deputados" dataset, the variables to be used were selected and the fields that were not standardized were identified. From there the dataset was cleaned and the figures were post-stratified.
 
-* **Interpretação:** As linhas de homens (azul) e mulheres (rosa) cruzam-se frequentemente. Quando as faixas sombreadas (Intervalos de Confiança) se sobrepõem, não há diferença estatística significativa. Portanto, indica que **o desafio real não é a permanência, mas sim a barreira de acesso inicial ao cargo**.
+*Methodology*
 
-Além disso, OR próximo de 1.0 indica que ser homem ou mulher não altera drasticamente a chance de continuidade e o fator "Legislatura" apresenta p-valor significativo, mostrando que a renovação política segue um processo temporal natural.
+The project was developed in **Python**, following these statistical criteria:
+
+* **Data processing:** `pandas` and `NumPy` to reshape the data into *long* format (one row per deputy per legislature).
+* **Statistics:** `statsmodels` for logistic regression and *Wilson confidence intervals* (robust for smaller samples).
+* **Machine learning:** `scikit-learn` for linear trend modeling.
+* **Visualization:** `matplotlib` and `seaborn` with color palettes chosen for accessibility and contrast.
+
+> **Methodological note:** "re-election" is treated as a *proxy* based on consecutive presence across legislatures (L-1 and L), capturing the continuity of the parliamentary mandate.
+
+## 1. Historical Context
+Women's participation in Brazilian politics is marked by historical under-representation. Legal mechanisms such as the **Quota Law (1997)** and the **earmarked party fund (2015)** acted as key drivers of change.
+
+![Evolution of women's representation](./data/processed/gráfico_representativade.png)
+
+* **What the data says:** the share of women went from **6.0%** in the 48th legislature to **23.0%** in the current one. Each point on the chart is a barrier broken. The largest jumps coincide with changes in legislation, showing that affirmative policies are essential to speed up the process.
 
 ---
 
-## 3. Projeção Linear e Paridade de Gênero
-Utilizei um modelo de **Regressão Linear** para projetar a tendência das próximas três legislaturas.
+## 2. Staying in Office
+The study investigates whether women, once elected, keep their seats at the same rate as men, using the re-election proxy (presence in consecutive legislatures).
 
-![Projeção de Tendência](./data/processed/grafico_projecao.png)
+![Re-election rate by gender](./data/processed/grafico_reeleicao_proxy_taxa%20(1).png)
 
-* **Previsão:** Estimamos atingir **24.4% em 2031**. Embora o crescimento seja constante ($R^2=0.88$), ainda estamos longe da paridade de 50%. No ritmo atual, a igualdade plena levaria décadas. Este dado é um convite à ação: como podemos acelerar essa curva?
+* **Reading:** the lines for men (blue) and women (pink) cross frequently. Where the shaded bands (confidence intervals) overlap, there is no statistically significant difference. The real challenge is therefore **not staying in office but the initial barrier to entry**.
+
+In the logistic regression, an odds ratio close to 1.0 indicates that being a man or a woman does not materially change the odds of continuity, while the "legislature" factor has a significant p-value, showing that political turnover follows a natural temporal process.
 
 ---
 
-## Estrutura do Repositório
+## 3. Linear Projection and Gender Parity
+A **linear regression** model was used to project the trend over the next three legislatures.
 
-* `data/processed/`: Gráficos gerados e tabelas KPI.
-* `notebook_analise.ipynb`: Código completo documentado.
-* `requirements.txt`: Dependências para execução do ambiente.
-* `deputados.csv`: Base de dados original (dados abertos).
+![Trend projection](./data/processed/grafico_projecao.png)
+
+* **Forecast:** the estimate reaches **24.4% in 2031**. Although growth is steady ($R^2=0.88$), parity at 50% is still far away. At the current pace, full equality would take decades. The figure is an invitation to act: how can this curve be accelerated?
+
+---
+
+## Repository Layout
+
+* `data/portfolio_genero_deputados_Version8.py`: full documented pipeline (cleaning, long format, re-election proxy, KPIs with Wilson intervals, logistic regression with odds ratios, linear projection and charts).
+* `data/deputados.csv`: original dataset from the Chamber of Deputies open data portal. Identifying fields that are not needed (such as `cpf` and social media URLs) are dropped in the first cleaning step.
+* `data/processed/`: generated charts and KPI tables.
+
+## How to Run
+
+```bash
+pip install pandas numpy matplotlib seaborn statsmodels scikit-learn
+cd data
+python portfolio_genero_deputados_Version8.py
+```
+
+The script reads `deputados.csv` from the working directory and writes the cleaned long table, the KPI table and the charts to a `data/processed/` folder created next to it.
